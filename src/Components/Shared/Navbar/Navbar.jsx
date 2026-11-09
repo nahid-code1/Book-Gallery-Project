@@ -5,18 +5,45 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to={"/"}>Home</NavLink>
+        <NavLink
+          to={"/"}
+          className={({ isActive }) =>
+            isActive
+              ? "text-green-500 border-2 border-green-500 bg-transparent rounded-lg"
+              : ""
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"/books"}>Listed Books</NavLink>
+        <NavLink
+          to={"/books"}
+          className={({ isActive }) =>
+            isActive
+              ? "text-green-500 border-2 border-green-500 bg-transparent rounded-lg"
+              : ""
+          }
+        >
+          Listed Books
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"/pages-to-read"}>Page to Read</NavLink>
+        <NavLink
+          to={"/pages-to-read"}
+          className={({ isActive }) =>
+            isActive
+              ? "text-green-500 border-2 border-green-500 bg-transparent rounded-lg"
+              : ""
+          }
+        >
+          Page to Read
+        </NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm px-2 md:px-6 rounded-lg">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,7 +66,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={-1}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-semibold"
           >
             {links}
           </ul>
@@ -49,10 +76,13 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="menu menu-horizontal px-1 font-semibold space-x-4">
+          {links}
+        </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-4">
+        <button className="btn btn-active btn-success">Sign in</button>
+        <button className="btn btn-active btn-info">Sign Up</button>
       </div>
     </div>
   );

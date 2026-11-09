@@ -7,7 +7,6 @@ const Main = () => {
     <div>
       <Navbar></Navbar>
       <Outlet></Outlet>
-      <p>This is main Layout</p>
     </div>
   );
 };

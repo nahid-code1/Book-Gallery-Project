@@ -1,9 +1,9 @@
 import React from "react";
 
-const Book = () => {
+const Book = ({ book }) => {
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-sm">
+      <div className="card bg-base-100 shadow-sm">
         <figure>
           <img
             src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -12,8 +12,10 @@ const Book = () => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">
-            Card Title
-            <div className="badge badge-secondary">NEW</div>
+            {book.bookName}
+            {book.tags.map((tag) => (
+              <div className="badge badge-secondary">{tag}</div>
+            ))}
           </h2>
           <p>
             A card component has a figure, a body part, and inside body there

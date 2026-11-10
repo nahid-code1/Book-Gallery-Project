@@ -1,9 +1,16 @@
-import React from "react";
+import React, { use } from "react";
+import Book from "./Book";
+
+const booksPromise = fetch("/booksData.json").then((res) => res.json());
 
 const Books = () => {
+  const books = use(booksPromise);
+  console.log(books);
   return (
-    <div>
-      <p>All books are here</p>
+    <div className="grid grid-cols-3">
+      {books.map((book) => (
+        <Book book={book}></Book>
+      ))}
     </div>
   );
 };

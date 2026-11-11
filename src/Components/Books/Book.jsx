@@ -3,9 +3,13 @@ import { FaRegStar } from "react-icons/fa";
 
 const Book = ({ book }) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
-      <figure>
-        <img src={book.image} alt="Shoes" />
+    <div className="card bg-base-100 shadow-lg   ">
+      <figure className="p-6">
+        <img
+          className="max-h-60 rounded-3xl shadow-lg"
+          src={book.image}
+          alt={book.bookName}
+        />
       </figure>
       <div className="card-body">
         <div className="flex item gap-5">

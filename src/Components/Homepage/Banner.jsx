@@ -4,10 +4,10 @@ const Banner = () => {
   return (
     <div>
       <div className="hero bg-base-200 min-h-[70vh] mt-10 rounded-xl">
-        <div className="hero-content flex-col lg:flex-row-reverse justify-between w-full">
+        <div className="p-4 md:p-0 md:hero-content flex-col lg:flex-row-reverse justify-between w-full">
           <img alt="Hero image for book gallery" src={heroImage} />
           <div>
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-2xl md:text-5xl font-bold">
               Books to freshen up <br /> your bookshelf
             </h1>
 

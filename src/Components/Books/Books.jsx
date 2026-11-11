@@ -7,7 +7,7 @@ const Books = () => {
   const books = use(booksPromise);
   console.log(books);
   return (
-    <div className=" gap-10">
+    <div className="space-y-5">
       {books.map((book) => (
         <Book book={book}></Book>
       ))}

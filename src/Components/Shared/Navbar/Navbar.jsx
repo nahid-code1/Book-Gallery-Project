@@ -25,6 +25,18 @@ const Navbar = () => {
               : ""
           }
         >
+          Books
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={"/listed-books"}
+          className={({ isActive }) =>
+            isActive
+              ? "text-green-500 border-2 border-green-500 bg-transparent rounded-lg"
+              : ""
+          }
+        >
           Listed Books
         </NavLink>
       </li>

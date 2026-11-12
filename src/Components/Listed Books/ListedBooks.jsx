@@ -1,12 +1,25 @@
-import React, { useContext } from "react";
-import { BookContext } from "../Context/BookContext/BookProvider";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+
+import Readlist from "./Readlist";
+import Wishlist from "./Wishlist";
 
 const ListedBooks = () => {
-  const { readList } = useContext(BookContext);
   return (
-    <div>
-      <p>All the listed books are here</p>
-      <p>{readList.length}</p>
+    <div className="mt-10">
+      <Tabs>
+        <TabList>
+          <Tab>Readlist</Tab>
+          <Tab>Wishlist</Tab>
+        </TabList>
+
+        <TabPanel>
+          <Readlist></Readlist>
+        </TabPanel>
+        <TabPanel>
+          <Wishlist></Wishlist>
+        </TabPanel>
+      </Tabs>
     </div>
   );
 };

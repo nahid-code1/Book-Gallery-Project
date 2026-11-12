@@ -22,17 +22,17 @@ const BookProvider = ({ children }) => {
       (book) => book.bookId === currentBook.bookId,
     );
     if (isExistOnWishList) {
-      toast.error(`${currentBook.bookName} already exist on Wishlist`);
+      toast.error(`${currentBook.bookName} already exist on readlist`);
       return;
     }
     const selectedBook = readList.some(
       (book) => book.bookId === currentBook.bookId,
     );
     if (selectedBook) {
-      toast.error(`${currentBook.bookName} already exist in read list`);
+      toast.error(`${currentBook.bookName} already exist in wishlist`);
     } else {
       const newReadList = [...wishlist, currentBook];
-      toast.success(`${currentBook.bookName} is added to read list`);
+      toast.success(`${currentBook.bookName} is added to wishlist`);
       setWishlist(newReadList);
     }
   };

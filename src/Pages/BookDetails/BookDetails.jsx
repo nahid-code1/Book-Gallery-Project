@@ -42,8 +42,10 @@ const BookDetails = () => {
           <div className="flex gap-3 border-b pb-4 border-gray-300">
             <p className="font-bold">Tag</p>
             <div className="flex item gap-5 ">
-              {book.tags.map((tag) => (
-                <div className="badge badge-secondary">#{tag}</div>
+              {book.tags.map((tag, i) => (
+                <div key={i} className="badge badge-secondary">
+                  #{tag}
+                </div>
               ))}
             </div>
           </div>

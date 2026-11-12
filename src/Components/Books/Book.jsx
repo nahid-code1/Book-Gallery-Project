@@ -17,8 +17,8 @@ const Book = ({ book }) => {
       </figure>
       <div className="card-body">
         <div className="flex item gap-5">
-          {book.tags.map((tag) => (
-            <div className="badge badge-secondary">{tag}</div>
+          {book.tags.map((tag, i) => (
+            <div key={i} className="badge badge-secondary">{tag}</div>
           ))}
         </div>
         <h2 className="card-title text-xl">{book.bookName}</h2>

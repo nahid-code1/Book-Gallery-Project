@@ -22,7 +22,7 @@ const Wishlist = ({ sortBy }) => {
     return (
       <div className="h-[50vh] flex items-center justify-center bg-gray-100">
         <h3 className="font-semibold text-xl md:text-3xl">
-          No books added to wishlist yet...
+          No books added to wishlist yet..
         </h3>
       </div>
     );

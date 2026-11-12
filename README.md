@@ -18,7 +18,7 @@ The project focuses on React fundamentals, component-based architecture, state m
 
 ## Screenshots
 
-![Book Gallery Screenshot](../Book-Gallery/src/assets/screenshot1.png)
+![Book Gallery Screenshot](/src/assets/screenshot1.png)
 
 ---
 

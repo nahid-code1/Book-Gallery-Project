@@ -83,7 +83,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to={"/"} className=" font-bold  text-xl">
+        <Link to={"/"} className=" font-bold text-md md:text-xl">
           Book Gallery
         </Link>
       </div>
@@ -93,7 +93,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-4">
-        <button className="btn btn-active btn-success">Sign in</button>
+        <button className="btn  btn-active btn-success">Sign in</button>
         <button className="btn btn-active hidden md:flex btn-info">
           Sign Up
         </button>

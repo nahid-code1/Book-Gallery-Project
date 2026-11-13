@@ -1,5 +1,6 @@
 import React from "react";
 import heroImage from "../../../src/assets/hero_img.jpg";
+import { Link } from "react-router";
 const Banner = () => {
   return (
     <div>
@@ -11,7 +12,9 @@ const Banner = () => {
               Books to freshen up <br /> your bookshelf
             </h1>
 
-            <button className="btn btn-success mt-10">Get Started</button>
+            <Link to={"/books"} className="btn btn-success mt-10">
+              Get Started
+            </Link>
           </div>
         </div>
       </div>
